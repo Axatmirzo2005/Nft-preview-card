@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
       const main = document.querySelector(".alter");
       const imgBox = document.querySelector(".img-box");
-      const section = document.querySelector("section");
+      const section = document.querySelector(".section");
       const close = document.querySelector(".hambur");
       const lock = document.querySelector(".box");
 
