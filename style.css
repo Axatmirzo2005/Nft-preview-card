@@ -155,7 +155,7 @@ main {
 
 /*section*/
 
-section {
+.section {
       position: absolute;
       opacity: 0;
       z-index: -1;  
@@ -163,7 +163,7 @@ section {
       transform: scale(0);
 }
 
-section img {
+.section img {
       object-fit: cover;
       width: 800px;
       border-radius: 20px;
@@ -224,7 +224,7 @@ section img {
 /*respond*/
 
 @media screen and (max-width: 768px) {
-      section img {
+      .section img {
             width: 370px;
             border-radius: 15px;
       }
