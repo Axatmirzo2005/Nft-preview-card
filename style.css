@@ -1,0 +1,250 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font: inherit;
+      font-size: 18px;
+      font-family: 'Outfit', sans-serif;
+}
+
+body {
+      background-color: hsl(217, 54%, 11%);
+}
+
+main {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: hsl(217, 54%, 11%);
+      color: white;
+}
+
+.box {
+      width: 350px;
+      height: auto;
+      border: 1px solid black;
+      padding: 25px;
+      border-radius: 20px;
+      background-color: hsl(216, 50%, 16%);
+}
+
+.img-box {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      background-image: url(./images/image-equilibrium.jpg);
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.img-box img {
+      opacity: 0;
+      background-color: hsla(178, 100%, 50%, 0.698);
+      padding: 125px;
+      border-radius: 10px;
+      transition: all .3s;
+}
+
+.img-box:hover img {
+      opacity: 1;
+      transition: opacity .2s;
+      cursor: pointer;
+}
+
+.box h1 {
+      font-size: 22px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      margin: 15px 0 15px 0;
+      transition: color .3s;
+      cursor: default;
+}
+
+.box h1:hover {
+      color: hsl(178, 100%, 50%);
+      transition: color .3s;
+      cursor: pointer;
+}
+
+.box p {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      color: hsl(215, 51%, 70%);
+      font-size: 18px;
+      line-height: 1.4;
+      cursor: default;
+}
+
+.protect-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 18px 0 18px 0;
+      cursor: default;
+}
+
+.protect-box span {
+      color: hsl(178, 100%, 50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 400;
+}
+
+.protect-box p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+}
+
+.protect-box p img {
+      width: 18px;
+      height: 18px;
+}
+
+.attention-avatar {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 15px 0 10px 0;
+      cursor: default;
+}
+
+.attention-avatar img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 1px solid white;
+}
+
+.attention-avatar p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      color: hsl(215, 51%, 70%);
+}
+
+.attention-avatar p span {
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+      transition: all .3s;
+}
+
+.attention-avatar p span:hover {
+      color: hsl(178, 100%, 50%);
+      transition: color .3s;
+      cursor: pointer;
+}
+
+.line {
+      width: 100%;
+      height: 0.1px;
+      opacity: 0.6;
+      background-color: hsl(215, 51%, 70%);
+}
+
+/*section*/
+
+section {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;  
+      transition: all .3s;
+      transform: scale(0);
+}
+
+section img {
+      object-fit: cover;
+      width: 800px;
+      border-radius: 20px;
+}
+
+.hambur {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+      position: relative;
+      left: 900px;
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      padding: 10px;
+      border-radius: 50%;
+}
+
+.hambur span {
+      width: 50px;
+      height: 3px;
+      background-color: black;
+      position: relative;
+}
+
+.hambur span:first-child {
+      transform: rotate(45deg);
+      position: relative;
+      top: 5px;
+}
+
+.hambur span:last-child {
+      transform: rotate(-45deg);
+      position: relative;
+      top: -11px;
+}
+
+/*js*/
+
+.active1 {
+      opacity: 1;
+      z-index: 10;
+      transition: all .3s;
+      transform: scale(1);
+}
+
+.active1 .active2 {
+      opacity: 0;
+      z-index: -1;
+}
+
+.active3 {
+      display: none;
+}
+
+/*respond*/
+
+@media screen and (max-width: 768px) {
+      section img {
+            width: 370px;
+            border-radius: 15px;
+      }
+
+      .hambur {
+            left: 310px;
+            top: 60px;
+            width: 40px;
+            height: 40px;
+      }
+
+      .hambur span {
+            width: 30px;
+      }
+
+      .hambur span:first-child {
+            top: 8px;
+      }
+
+      .hambur span:last-child {
+            top: -8px;
+      }
+}
